@@ -225,6 +225,26 @@ Key dependencies are managed in `gradle/libs.versions.toml`:
 - Google Maps SDK
 - Coroutines
 
+## Troubleshooting
+
+### iOS Build Error: "Permission denied" for gradlew
+
+If you encounter a "Permission denied" error when building the iOS app:
+
+```bash
+chmod +x ./gradlew
+```
+
+This ensures the Gradle wrapper script has execute permissions.
+
+### CocoaPods Installation Issues
+
+If `pod install` fails, try:
+```bash
+sudo gem install cocoapods
+pod repo update
+```
+
 ## Notes
 
 - The app uses in-memory storage for markers (data is lost on app restart)
